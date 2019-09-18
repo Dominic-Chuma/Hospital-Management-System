@@ -133,3 +133,48 @@ $('#delete-button').click(function(event) {
   });
 });
 
+
+// $('window').ready(()=>{
+  
+//   $('#contact_form').submit((e)=>{
+//       e.preventDefault();
+//       let idnum = $('#id-numb').val();
+//       $.ajax({
+//           url: 'http://localhost:3000/Patients',
+//           method: 'get',
+//       }).done((response)=>{
+//           let userExist = true;
+//           let id = 0;
+//           for (let i = 0; i < response.length; i++){
+//               if (response[i].id === idnum){
+//                   userExist = false;
+//                   id = response[i].id
+//               }
+//           }
+//           if (userExist === false){
+//               $('.deleteMessage')[0].innerText = 'User Nonexistent'
+//               $('.deleteMessage').fadeOut(3000)
+//               return
+//           }else if (userExist === true){//(!userExist)
+//               $('.deleteMessage')[0].innerText='User exists'//'No user exists'
+//               $('.deleteMessage').fadeOut(3000)
+//               return 
+//           }
+//           $.ajax({
+//               url: `http://localhost:3000/Patients/${id}`,
+//               method: 'delete',
+//               data: {
+//                 fullname,
+//                 email,
+//                 phone,
+//                 date,
+//               }
+//           }).done(()=>{
+//               window.location = 'http://localhost:3000/control-panel.html'
+//           })
+
+//       })
+//   })
+
+// })
+
