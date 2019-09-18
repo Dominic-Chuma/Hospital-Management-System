@@ -45,3 +45,39 @@ $('#button').click(function(event) {
     },
   });
 });
+
+
+
+//Login Function
+$('#login-button').click(function(event) {
+  event.preventDefault();
+  const passwordLogin = $('#password_modal').val();
+  const emailLogin = $('#email_modal').val();
+  if (!passwordLogin || !emailLogin) {
+    $('.logMessage').html('Kindly fill in all fields');
+    return;
+  }
+  //Check if the user is in the database
+  $.ajax({
+    method: 'GET',
+    url: `http://localhost:3000/Admin?email=${emailLogin}&password=${passwordLogin}`,
+    data: {
+      email: emailLogin,
+      password: passwordLogin,
+    },
+    beforeSend: function() {
+      $('.logMessage').html('Loading....');
+    },
+    success: function(response) {
+      if (response.length) {
+        //$('.regMessage').html('Login sucessful');
+        //$('.checkLogin').html('You are logged in');
+        localStorage.setItem('email', emailLogin);
+        //redirect to control Panel page if the login is successfull
+        window.location.assign('control-panel.html');
+      } else {
+        $('.logMessage').html('Username or password Incorrect');
+      }
+    },
+  });
+});
