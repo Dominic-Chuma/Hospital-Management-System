@@ -1,0 +1,46 @@
+{
+  "Patients": [
+    {
+      "id": 1,
+      "name": "SColeman",
+      "email": "Brett@gal.co",
+      "phone": "07038887388",
+      "date MM/DD/YY": "07/16/2019"
+    },
+    {
+      "id": 2,
+      "name": "SColeman",
+      "email": "rett@gal.co",
+      "phone": "07047480382",
+      "date MM/DD/YY": "07/16/2019"
+    },
+    {
+      "id": 3,
+      "name": "SColeman",
+      "email": "Bret@gal.co",
+      "phone": "09046783873",
+      "date MM/DD/YY": "07/16/2019"
+    },
+    {
+      "fullname": "Dominic Chuma",
+      "email": "energyransoms@gmail.com",
+      "phone": "07031203995",
+      "date": "09/18/2019",
+      "id": 4
+    }
+  ],
+  "Admin": [
+    {
+      "id": 1,
+      "fullname": "Dominic Chuma",
+      "email": "energyransoms@gmail.com",
+      "password": "tree123#"
+    },
+    {
+        "id": 2,
+        "fullname": "Benjamin Mark",
+        "email": "ransom@gmail.com",
+        "password": "tree123#"
+      }
+  ]
+}

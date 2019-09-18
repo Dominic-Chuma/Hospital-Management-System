@@ -1,0 +1,26 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "fullname": "Dominic Chuma",
+      "email": "type@cole.com",
+      "password": "player1"
+    },
+    {
+      "id": 2,
+      "fullname": "Jeremy Iron",
+      "email": "clay@udemy.com",
+      "password": "player2"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
