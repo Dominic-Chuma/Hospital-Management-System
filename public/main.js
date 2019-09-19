@@ -8,6 +8,7 @@ $('#button').click(function(event) {
   //Check if user input is empty
   if (!fullname || !date || !phone || !email) {
     $('.regMessage').html('Kindly fill in all fields');
+    $('.regMessage').fadeOut(3000);
     return;
   }
   //Make get request to check if the user already exist
@@ -39,6 +40,7 @@ $('#button').click(function(event) {
           },
           success: function() {
             $('.regMessage').html('Registration Successfull');
+            $('.regMessage').fadeOut(3000);
           },
         });
       }
@@ -198,3 +200,40 @@ const del = () => {
     })
     .catch(error => console.log(error.messge));
 };
+
+//Display Function for individual Patient Appointment...............
+
+const display = () => {
+  const id = document.querySelector('#idnum').value;
+  console.log(id);
+  fetch(
+    `http://localhost:3000/Patients/${id}`,{
+      method:'GET',
+      headers:{
+        "Content-Type": 'application/json',
+      }
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+
+      patient = '';
+      patient += `<div>
+      
+      <p>Name: ${data.fullname}</p>
+      <p>Email: ${data.email}</p>
+      <p>Phone: ${data.phone}</p>
+      <p>Date: ${data.date}</p>
+    </div>`;
+      $('#display-div').append(patient);
+
+
+    })
+    .catch(error => console.log(error.messge));
+};
+
+
+//Click to display....
+$('#display-button').click(function(){
+  $('#hide').show();
+})

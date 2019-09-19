@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
 <link href="plugins/jquery-datepicker/jquery-ui.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="MyCSS.css">
 </head>
 <body>
 
@@ -47,7 +48,7 @@
 				
 
 				<!-- Appointment Button -->
-				<div class="button button_1 header_button" id="request"><a href="http://localhost:3000/Patients">List out all Patients</a></div>
+				<div class="button button_1 header_button" id="request"><a href="StaticResult.html">List out all Patients</a></div>
 
 				
 
@@ -99,17 +100,116 @@
 									
 									<input type="text" id="datepicker" class="contact_input datepicker" placeholder="Date" required="required"> -->
 							</div>
-							<button id="delete-button" onclick="del()" class="button button_1 contact_button trans_200">Delete Patient</button>
+							<button id="delete-button" onclick="del()" class="button button_1 contact_button trans_200">Delete Patient from DataBase</button>
 						</form>
 					</div>
 				</div>
 
-<script>
-	
+				<!-- Contact Form 2-->
+		<div class="col-lg-6"><br><br><br>
+			<div class="contact_form_container">
+				<div class="contact_form_title">Individual Appointment Panel</div>
+				<h3 class="deleteMessage"></h3>
+				<p>Please Enter The Patient's Id Num Below</p>
+				<form action="#" class="contact_form" id="contact_form">
+					<div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
+							<input type="text" id="idnum" class="idd contact_input" placeholder="id Num" required="required">
+							<!-- <input type="email" class="contact_input" placeholder="Your E-mail" required="required">
+							<input type="tel" class="contact_input" placeholder="Your Phone" required="required">
+							
+							
+							<input type="text" id="datepicker" class="contact_input datepicker" placeholder="Date" required="required"> -->
+					</div>
+					<button id="show-button" onclick="display()" class="button button_1 contact_button trans_200" data-toggle="modal" data-target="#display-modal">Show Appointment</button>
+				</form>
+			</div>
+		</div>
+			</div>
+		</div>
+	</div>
 
-	
-</script>
+		
+	</div>
+</div>
+</div>
+</div>
+
+
+    <!-- Display Modal-->
+	<div id="display-modal" tabindex="-1" role="dialog" aria-labelledby="login-modalLabel" aria-hidden="true" class="modal fade">
+        <div role="document" class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 id="login-modalLabel" class="modal-title">Patient Appointment History</h4>
+              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+
+				<!-- Indicative HTML element for Display messages -->
+				<p class="logMessage"></p>
+				<!-- Indicative messaging end -->
+
+              <form action="control-panel.html" method="get" id="display-form" >
+				  <!-- Information Display Segment -->
+				<div id="display-div" ></div>
+				
+				
+
+				<p class="text-center">
+						<button id="display-button" class="btn btn-template-outlined" name="login-btn"><i class="fa fa-sign-in"></i>
+						<a href ="#"> </a> Click to Update Info</button>
+				</p>
+
+                <div id="hide" ><br><br>
+					
+							  <div class="form-group">
+								<input id="email_modal" type="text" placeholder="Edit Name" class="form-control" required>
+							  </div>
+							  <div class="form-group">
+									<input id="email_modal" type="email" placeholder="Edit Email" class="form-control" required>
+								  </div>
+							  <div class="form-group">
+								<input id="password_modal" type="text" placeholder="Edit Phone" class="form-control" required>
+							  </div>
+								  <div class="form-group">
+									<input id="password_modal" type="text" placeholder="Edit Date" class="form-control" required>
+								  </div>
+							  <p class="text-center">
+								  <button id="update-button" class="btn btn-template-outlined" name="login-btn"><i class="fa fa-sign-in"></i>
+								  <a href ="#"> </a> Update Info</button>
+							  </p>
+							</form>
+
+				</div>
+				
+<!--
+              <p class="text-center text-muted">Not registered yet?</p>
+              <p class="text-center text-muted"><a href="Register-modal" data-toggle="modal" data-target="#Register-modal"><strong>Register now</strong></a>! It is easy and would only take a minute. This gives you access to our products and much more!</p>
+-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Display modal end-->
+
+
+
+
+
+<script></script>
+<script>
+// 	$('window').ready(() => {
+// 	$("#hide").hide();
+// 	$("#display-button").on(click, function(){
+// 		$("#hide").show();
+
+
+// 	});
+// });
+
+	</script>
 <script src="js/jquery-3.2.1.min.js"></script>
+<script> src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" </script>
 <script src="styles/bootstrap-4.1.2/popper.js"></script>
 <script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
 <script src="plugins/greensock/TweenMax.min.js"></script>

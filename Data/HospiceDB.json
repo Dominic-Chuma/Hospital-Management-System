@@ -8,25 +8,32 @@
       "date MM/DD/YY": "07/16/2019"
     },
     {
-      "fullname": "Dominic Chuma",
-      "email": "energyransoms@gmail.com",
-      "phone": "07031203995",
-      "date": "09/18/2019",
-      "id": 2
-    },
-    {
       "fullname": "Didi haman",
       "email": "energy@gmail.com",
       "phone": "07031203995",
       "date": "09/18/2019",
-      "id": 3
+      "id": 2
     },
     {
       "fullname": "Dom kumar",
       "email": "ransomware@gmail.com",
       "phone": "07031203995",
       "date": "09/18/2019",
+      "id": 3
+    },
+    {
+      "fullname": "Dominic Chuma",
+      "email": "energyransoms@gmail.com",
+      "phone": "07031203995",
+      "date": "09/19/2019",
       "id": 4
+    },
+    {
+      "fullname": "Ify Chuma",
+      "email": "ene@gmail.com",
+      "phone": "07031203995",
+      "date": "09/19/2019",
+      "id": 5
     }
   ],
   "Admin": [
