@@ -180,3 +180,21 @@ $('#login-button').click(function(event) {
 
 // })
 
+const del = () => {
+  const id = document.querySelector('.idd').value;
+  console.log(id);
+  fetch(
+    `http://localhost:3000/Patients/${id}`,{
+      method:'DELETE',
+      headers:{
+        "Content-Type": 'application/json',
+      }
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(id);
+
+
+    })
+    .catch(error => console.log(error.messge));
+};
