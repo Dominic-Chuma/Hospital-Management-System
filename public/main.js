@@ -86,52 +86,54 @@ $('#login-button').click(function(event) {
 
 //Delete Function.......
 
-$('#delete-button').click(function(event) {
-  event.preventDefault();
-  const fullname = $('#name').val();
-  const date = $('#datepicker').val();
-  const phone = $('#phone').val();
-  const email = $('#email').val();
-  //Check if user input is empty
-  if (!fullname || !date || !phone || !email) {
-    $('.deleteMessage').html('Kindly fill in the field');
-    return;
-  }
-  //Make get request to check if the user already exist
-  $.ajax({
-    method: 'GET',
-    url: `http://localhost:3000/Patients?email=${email}`,
-    data: {
-      email,
-    },
-    beforeSend: function() {
-      $('.deleteMessage').html('Loading....');
-    },
-    success: function(response) {
-      if (response.length) {
-        $('.deleteMessage').html('User is available');
-      } else {
-        //Submit the user data if the user does not exist
-        $.ajax({
-          method: 'DELETE',
-          url: 'http://localhost:3000/Patients',
-          data: {
-            fullname,
-            email,
-            phone,
-            date,
-          },
-          beforeSend: function() {
-            $('.deleteMessage').html('Loading....');
-          },
-          success: function() {
-            $('.deleteMessage').html('delete Successfull');
-          },
-        });
-      }
-    },
-  });
-});
+// $('#delete-button').click(function(event) {
+//   event.preventDefault();
+//   const fullname = $('#name').val();
+//   const date = $('#datepicker').val();
+//   const phone = $('#phone').val();
+//   const email = $('#email').val();
+//   //Check if user input is empty
+//   if (!fullname || !date || !phone || !email) {
+//     $('.deleteMessage').html('Kindly fill in the field');
+//     return;
+//   }
+//   //Make get request to check if the user already exist
+//   $.ajax({
+//     method: 'GET',
+//     url: `http://localhost:3000/Patients?email=${email}`,
+//     data: {
+//       email,
+//     },
+//     beforeSend: function() {
+//       $('.deleteMessage').html('Loading....');
+//     },
+//     success: function(response) {
+//       if (response.length) {
+//         $('.deleteMessage').html('User is available');
+//       } else {
+//         //Submit the user data if the user does not exist
+//         $.ajax({
+//           const idb = $('#id-num').val();
+//           console.log(idb)
+//           method: 'DELETE',
+//           url: 'http://localhost:3000/Patients/id',
+//           data: {
+//             fullname,
+//             email,
+//             phone,
+//             date,
+//           },
+//           beforeSend: function() {
+//             $('.deleteMessage').html('Loading....');
+//           },
+//           success: function() {
+//             $('.deleteMessage').html('delete Successfull');
+//           },
+//         });
+//       }
+//     },
+//   });
+// });
 
 
 // $('window').ready(()=>{
