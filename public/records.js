@@ -19,19 +19,19 @@ $(document).ready(function(){
 
 
 //Display database function...........For Individual Patients
-$(document).ready(function(){
-    $.ajax({
-        url:'http://localhost:3000/Patients/id',
-        method: 'get'
-    }).done(function(response){
-            patient = '';
-            patient += `<div>
+// $(document).ready(function(){
+//     $.ajax({
+//         url:'http://localhost:3000/Patients/id',
+//         method: 'get'
+//     }).done(function(response){
+//             patient = '';
+//             patient += `<div>
             
-            <p>${value.fullname}</p>
-            <p>${value.email}</p>
-            <p>${value.phone}</p>
-            <p>${value.date}</p>
-          </div>`;
-            $('#display-form').append(patient);
-    });
-});
+//             <p>${value.fullname}</p>
+//             <p>${value.email}</p>
+//             <p>${value.phone}</p>
+//             <p>${value.date}</p>
+//           </div>`;
+//             $('#display-form').append(patient);
+//     });
+// });

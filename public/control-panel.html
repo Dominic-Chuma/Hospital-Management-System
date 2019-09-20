@@ -150,7 +150,8 @@
 				<!-- Indicative messaging end -->
 
               <form action="control-panel.html" method="get" id="display-form" >
-				  <!-- Information Display Segment -->
+				  
+				<!-- Information Display Segment -->
 				<div id="display-div" ></div>
 				
 				
@@ -160,22 +161,27 @@
 						<a href ="#"> </a> Click to Update Info</button>
 				</p>
 
-                <div id="hide" ><br><br>
+				<div id="hide" ><br><br>
 					
+					<div id="display-div-2" ></div>
+							
+					<div class="form-group">
+						<input id="id-modal" type="text" placeholder="Enter Id Number" class="form-control" required>
+					  </div>
 							  <div class="form-group">
-								<input id="email_modal" type="text" placeholder="Edit Name" class="form-control" required>
+								<input id="name-modal" type="text" placeholder="Edit Name" class="form-control" required>
 							  </div>
 							  <div class="form-group">
-									<input id="email_modal" type="email" placeholder="Edit Email" class="form-control" required>
+									<input id="email-modal" type="email" placeholder="Edit Email" class="form-control" required>
 								  </div>
 							  <div class="form-group">
-								<input id="password_modal" type="text" placeholder="Edit Phone" class="form-control" required>
+								<input id="phone-modal" type="text" placeholder="Edit Phone" class="form-control" required>
 							  </div>
 								  <div class="form-group">
-									<input id="password_modal" type="text" placeholder="Edit Date" class="form-control" required>
+									<input id="date-modal" type="text" placeholder="Edit Date" class="form-control intro_input datepicker" required>
 								  </div>
 							  <p class="text-center">
-								  <button id="update-button" class="btn btn-template-outlined" name="login-btn"><i class="fa fa-sign-in"></i>
+								  <button id="update-button" onclick="update()" class="btn btn-template-outlined" name="login-btn"><i class="fa fa-sign-in"></i>
 								  <a href ="#"> </a> Update Info</button>
 							  </p>
 							</form>
@@ -221,6 +227,7 @@
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
 <script src="js/contact.js"></script>
+<script src="js/custom.js"></script>
 <script src="axios.min.js"></script>
 <script src="main.js"></script>
 

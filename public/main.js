@@ -233,7 +233,112 @@ const display = () => {
 };
 
 
-//Click to display....
+//Click to display....Coupled with some CSS Effect....
 $('#display-button').click(function(){
   $('#hide').show();
-})
+});
+
+
+//Update function..................
+
+const update = () => {
+  const id = document.querySelector('#id-modal').value;
+  console.log(id);
+
+  const fulname = $('#name-modal').val();
+  const dat = $('#date-modal').val();
+  const phon = $('#phone-modal').val();
+  const Email = $('#email-modal').val();
+
+  fetch(
+    `http://localhost:3000/Patients/${id}`,{
+      method:'PUT',
+      headers:{
+        "Content-Type": 'application/json',
+      },
+      body:JSON.stringify({fullname:fulname,email:Email,phone:phon,date:dat})
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(id);
+
+      
+
+
+    })
+    .catch(error => console.log(error.messge));
+};
+
+
+
+
+
+
+
+// $('#update-button').click(function(event) {
+//   event.preventDefault();
+//   const idn = $('#id-modal').val();
+//   const fulname = $('#name-modal').val();
+//   const dat = $('#date-modal').val();
+//   const phon = $('#phone-modal').val();
+//   const Email = $('#email-modal').val();
+  //Check if user input is empty
+  // if (!fulname || !phon || !Email) {
+  //   $('#display-div-2').html('Kindly fill in all fields');
+  //   $('#display-div-2').fadeOut(3000);
+  //   return;
+  // }
+  //Make get request to check if the user already exist
+  //const id = document.querySelector('#idnum').value;
+
+
+
+
+
+  // $.ajax({
+  //   method: 'GET',
+  //   url: `http://localhost:3000/Patients?id=${id}`,
+  //   data: {
+  //     idn
+  //   },
+  //   beforeSend: function() {
+  //     $('#display-div-2').html('Loading....');
+  //   },
+  //   success: function(response) {
+  //     if (response.length) {
+  //       $('#display-div-2').html('User already exist');
+
+  //       $.ajax({
+  //         method: 'PUT',
+  //         url: `http://localhost:3000/Patients/${id=idn}`,
+  //         data: {
+  //           fulname,
+  //           Email,
+  //           phon,
+  //         },
+  //         beforeSend: function() {
+  //           $('#display-div-2').html('Loading....');
+  //         },
+  //         success: function() {
+  //           $('#display-div-2').html('Update Successfull');
+  //           $('#display-div-2').fadeOut(3000);
+  //         },
+  //       });
+
+  //     } else {
+        //alert("Show that the user does not exist");
+//         $('#display-div-2').html('No Existent Patient By Such Id');
+//             $('#display-div-2').fadeOut(3000);
+//       }
+//     },
+//   });
+// });
+
+
+
+
+
+
+
+
+
