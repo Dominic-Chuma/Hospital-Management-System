@@ -8,17 +8,10 @@
       "date": "07/16/2019"
     },
     {
-      "fullname": "Didi lamido",
-      "email": "anele@gmail.com",
-      "phone": "7031203995",
-      "date": "09/20/2019",
-      "id": 2
-    },
-    {
-      "fullname": "Dom kumar",
-      "email": "ransomware@gmail.com",
+      "fullname": "Dumber Kumaru",
+      "email": "ransomeware@gmail.com",
       "phone": "07031203995",
-      "date": "09/18/2019",
+      "date": "10/18/2019",
       "id": 3
     },
     {
@@ -34,6 +27,20 @@
       "phone": "07031203995",
       "date": "09/19/2019",
       "id": 5
+    },
+    {
+      "fullname": "Samuel Orji",
+      "email": "desmond@gmail.com",
+      "phone": "074893892082",
+      "date": "09/20/2020",
+      "id": 6
+    },
+    {
+      "fullname": "Devon teller",
+      "email": "devon@gmail.com",
+      "phone": "04754876984",
+      "date": "01/06/2020",
+      "id": 7
     }
   ],
   "Admin": [

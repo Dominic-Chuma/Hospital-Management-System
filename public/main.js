@@ -72,9 +72,8 @@ $('#login-button').click(function(event) {
     },
     success: function(response) {
       if (response.length) {
-        //$('.regMessage').html('Login sucessful');
-        //$('.checkLogin').html('You are logged in');
-        localStorage.setItem('email', emailLogin);
+        // Stores temporarily the input email to create a session Kinda...
+        localStorage.setItem('email', emailLogin); //
         //redirect to control Panel page if the login is successfull
         window.location.assign('control-panel.html');
       } else {
